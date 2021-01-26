@@ -3,11 +3,12 @@
 
 def distance_converter(distance, unit1, unit2):
 
-    # The user input/arguments would be the quantity(distance,weight, temperature)
-    # unit1 and unit2 are the current unit and the united converted to respectively
-    # unit1 and unit2 are strings
-    # distance, weight, and temp are all int/float types.
-   
+    ''''
+     The user input/arguments would be the quantity(distance,weight, temperature),
+     unit1 and unit2 are the current unit and the united converted to respectively
+     unit1 and unit2 are strings
+     distance, weight, and temp are all int/float types.
+   ''''
     if unit1 in "meters" and unit2 in "feet":
         return str(distance * 3.28) + " " + unit2
 
@@ -73,5 +74,3 @@ def temp_converter(temp, unit1, unit2):
 
     else:
         return str(temp) + " " + unit1 + " = " + str((temp - 32)/1.8) + " " + unit2
-
-
