@@ -1,6 +1,8 @@
-##===================
-## define functions
-##===================
+#===================
+
+#define functions
+
+#===================
 
 
 def meters_converter(meters, unit):
@@ -13,8 +15,10 @@ def meters_converter(meters, unit):
     
     elif unit in "miles":
         return str(meters * 0.000621) + " " + unit
+    
     else:
         return "invalid unit"
+    
     
 def inches_converter(inches, unit):
     
