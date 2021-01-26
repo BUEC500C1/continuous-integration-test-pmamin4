@@ -24,7 +24,7 @@ def inches_converter(inches, unit):
     elif unit in "miles":
         return str(inches * 0.000189 / 12) + " " + unit
     
-    elif unit in "meters:
+    elif unit in "meters":
         return str(inches * 0.0254) + " " + unit    
     
     else:
