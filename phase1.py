@@ -1,14 +1,6 @@
 
 ## define functions
 
-
-    ''''
-     The user input/arguments would be the quantity(distance,weight, temperature),
-     unit1 and unit2 are the current unit and the united converted to respectively
-     unit1 and unit2 are strings
-     distance, weight, and temp are all int/float types.
-    ''''
-
 def meters_converter(meters, unit1):
     
     if unit1 in "inches":
