@@ -108,3 +108,31 @@ def temp_converter(temp, unit1, unit2):
 
     else:
         return str(temp) + " " + unit1 + " = " + str((temp - 32)/1.8) + " " + unit2
+    
+    
+# ============================================================
+
+# Defining testing here
+
+# ============================================================
+
+def test_distance():
+
+    assert meters_converter(0.0254, "inches") == "1 inches"
+    
+    assert inches_converter(24, "feet") == "2 feet"
+   
+    assert meters_converter(1, "inches") == "39 inches"
+    
+    assert feet_converter(3 , "inches") == "36 inches"
+    
+    assert distance_convert(1609.34, "meters", "miles") == "1 miles"
+    
+    assert distance_convert(72, "inches", "feet") == "6 feet"
+    
+ 
+def test_temperature():
+    
+    assert temp_converter(32,"celsius", "fahrenheit")
+    
+    assert temp_converter(90, "fahrenheit", "celsius")
