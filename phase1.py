@@ -119,6 +119,6 @@ def temp_converter(temp, unit1, unit2):
 def test_distance():
 
     
-    assert inches_converter(24, "feet") == '2 feet'
+    assert inches_converter(24, "feet") == '2.0 feet'
    
     
