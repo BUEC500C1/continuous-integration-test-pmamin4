@@ -128,3 +128,20 @@ def test_distance():
 
     assert distance_convert(72, "inches", "feet") == '6 feet'   
     
+    assert distance_convert(72, "ies", "et") == 'invalid unit'
+    
+def test_weight():
+    
+    assert weight_converter(1, "kilograms", "ounces") == '35 ounces'
+    
+    assert weight_converter(72, "ounces", "kilograms") == '2 kilograms'
+    
+    assert weight_converter(72, "ounces", "pounds) == '5 pounds'
+                         
+    assert weight_converter(5, "pounds", "ounces") == '80 ounces'
+                           
+    assert weight_converter(10, "kilograms", "pounds") == '22 pounds'
+                            
+    assert weight_converter(22, "pounds", "kilograms) == '10 pounds'
+                            
+    assert weight_converter(10, "rr", "kilograms") == 'invalid unit' 
