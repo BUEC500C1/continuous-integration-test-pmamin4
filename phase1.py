@@ -99,10 +99,10 @@ def weight_converter(weight, unit1, unit2):
 
 
 def temp_converter(temp, unit1, unit2):
-    if unit1 in "celsius":
+    if unit1 in "celsius" and unit2 in "fahrenheit":
         return str(round((temp * 1.8) + 32)) + " " + unit2
 
-    elif unit1 in "fahrenheit":
+    elif unit1 in "fahrenheit" and unit2 in "celsius":
         return str(round((temp - 32) / 1.8)) + " " + unit2
 
     else:
