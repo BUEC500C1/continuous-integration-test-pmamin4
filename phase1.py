@@ -77,6 +77,7 @@ def distance_convert(distance, unit1, unit2):
 
 
 def weight_converter(weight, unit1, unit2):
+    
     if unit1 in "kilograms" and unit2 in "ounces":
         return str(round(weight * 35.274)) + " " + unit2
 
@@ -94,19 +95,36 @@ def weight_converter(weight, unit1, unit2):
 
     elif unit1 in "pounds" and unit2 in "ounces":
         return str(round(weight / 0.0625)) + " " + unit2
+    
+    else:
+        return "invalid unit"
+
+
+def celsius_convert(degrees, unit):
+
+    if unit in "fahrenheit":
+        return str(round((degrees * 1.8) + 32)) + " " + unit
+
+    else:
+        return "invalid unit"
+
+
+def fahrenheit_convert(degrees, unit):
+    
+    if unit in "celsius":
+        return str(round((degrees - 32) / 1.8)) + " " + unit
+
     else:
         return "invalid unit"
 
 
 def temp_converter(temp, unit1, unit2):
-    if unit1 in "celsius" and unit2 in "fahrenheit":
-        return str(round((temp * 1.8) + 32)) + " " + unit2
 
-    elif unit1 in "fahrenheit" and unit2 in "celsius":
-        return str(round((temp - 32) / 1.8)) + " " + unit2
-    
-    elif unit1 not in ["fahrenheit" , "celsius"]:
-        return "invalid unit"
+    if unit1 in "celsius":
+        return celsius_convert(temp, unit2)
+
+    elif unit1 in "fahrenheit":
+        return fahrenheit_convert(temp, unit2)
 
     else:
         return "invalid unit"
