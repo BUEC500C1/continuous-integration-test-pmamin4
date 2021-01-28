@@ -136,7 +136,7 @@ def test_weight():
     
     assert weight_converter(72, "ounces", "kilograms") == '2 kilograms'
     
-    assert weight_converter(72, "ounces", "pounds") == '5 pounds'
+    assert weight_converter(72, "ounces", "pounds") == '4 pounds'
                          
     assert weight_converter(5, "pounds", "ounces") == '80 ounces'
                            
