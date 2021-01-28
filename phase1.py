@@ -118,11 +118,11 @@ def temp_converter(temp, unit1, unit2):
 def test_distance():
 
     
-    assert inches_converter(24, "feet") == '2.0 feet'
+    assert inches_converter(24, "feet") == '2 feet'
     
-    assert meters_converter(1, "inches") == '39.0 inches'
+    assert meters_converter(1, "inches") == '39 inches'
 
-    assert feet_converter(3, "inches") == '36.0 inches'
+    assert feet_converter(3, "inches") == '36 inches'
 
     assert distance_convert(1609.34, "meters", "miles") == '1 miles'
 
