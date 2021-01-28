@@ -104,6 +104,9 @@ def temp_converter(temp, unit1, unit2):
 
     elif unit1 in "fahrenheit" and unit2 in "celsius":
         return str(round((temp - 32) / 1.8)) + " " + unit2
+    
+    elif unit1 not in ["fahrenheit" , "celsius"]:
+        return "invalid unit"
 
     else:
         return "invalid unit"
@@ -159,4 +162,4 @@ def test_temperature():
     
     assert temp_converter(32, "celsius", "j") == 'invalid unit'
     
-    assert temp_converter(89.6, "fahrenheit", "c") == 'invalid unit'
+    assert temp_converter(89.6, "fahrenheit", "cas") == 'invalid unit'
