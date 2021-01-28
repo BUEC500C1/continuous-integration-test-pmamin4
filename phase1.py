@@ -145,3 +145,14 @@ def test_weight():
     assert weight_converter(22, "pounds", "kilograms") == '10 kilograms'
                             
     assert weight_converter(10, "rr", "kilograms") == 'invalid unit' 
+    
+    
+ def test_temperature():
+    
+    assert temp_converter(32, "celsius", "fahrenheit") == '90 fahrenheit' 
+    
+    assert temp_converter(89.6, "fahrenheit", "celsius") == '32 celsius'
+    
+    assert temp_converter(32, "C", "celsius") == 'invalid unit'
+    
+    assert temp_converter(89.6, "f", "fahrenheit") == 'invalid unit'
