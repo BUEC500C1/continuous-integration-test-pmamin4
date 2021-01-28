@@ -181,3 +181,5 @@ def test_temperature():
     assert temp_converter(32, "celsius", "j") == 'invalid unit'
     
     assert temp_converter(89.6, "fahrenheit", "cas") == 'invalid unit'
+    
+    assert temp_converter(89.6, "fahrenheit", "case") == 'invalid unit'
