@@ -9,7 +9,6 @@ def meters_converter(meters, unit):
     inch = ["inches", "inch", "in"]
     feet = ["feet", "ft"]
     mile = ["miles", "mile", "mi"]
-    meter = ["meters", "meter", "m"]
 
     if unit in inch:
         return str(round(meters * 39.37)) + " " + unit
