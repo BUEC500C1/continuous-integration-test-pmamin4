@@ -6,9 +6,10 @@
 
 def meters_converter(meters, unit):
     
-    inch = ["inches", "in"]
+    inch = ["inches", "inch", "in"]
     feet = ["feet", "ft"]
-    mile = ["miles", "mi"]
+    mile = ["miles", "mile", "mi"]
+    meter = ["meters", "meter", "m"]
 
     if unit in inch:
         return str(round(meters * 39.37)) + " " + unit
@@ -26,8 +27,8 @@ def meters_converter(meters, unit):
 def inches_converter(inches, unit):
     
     feet = ["feet", "ft"]
-    mile = ["miles", "mi"]
-    meter = ["meters", "m"]
+    mile = ["miles", "mile", "mi"]
+    meter = ["meters", "meter", "m"]
 
     if unit in feet:
         return str(round(inches / 12)) + " " + unit
@@ -44,9 +45,9 @@ def inches_converter(inches, unit):
 
 def feet_converter(feet, unit):
     
-    inch = ["inches", "in"]
-    mile = ["miles", "mi"]
-    meter = ["meters", "m"]
+    inch = ["inches", "inch", "in"]
+    mile = ["miles", "mile", "mi"]
+    meter = ["meters", "meter", "m"]
 
     if unit in inch:
         return str(round(feet * 12)) + " " + unit
@@ -63,9 +64,9 @@ def feet_converter(feet, unit):
 
 def miles_converter(miles, unit):
     
-    inch = ["inches", "in"]
+    inch = ["inches", "inch", "in"]
     feet = ["feet", "ft"]
-    meter = ["meters", "m"]
+    meter = ["meters", "meter", "m"]
 
     if unit in inch:
         return str(round((miles * 12) / 0.000189)) + " " + unit
@@ -82,10 +83,10 @@ def miles_converter(miles, unit):
 
 def distance_convert(distance, unit1, unit2):
     
-    inch = ["inches", "in"]
+    inch = ["inches", "inch", "in"]
     feet = ["feet", "ft"]
-    mile = ["miles", "mi"]
-    meter = ["meters", "m"]
+    mile = ["miles", "mile", "mi"]
+    meter = ["meters", "meter", "m"]
 
     if unit1 in meter:
         return meters_converter(distance, unit2)
@@ -104,9 +105,9 @@ def distance_convert(distance, unit1, unit2):
 
 def weight_converter(weight, unit1, unit2):
     
-    kilo = ["kilograms", "kilo", "k"]
-    ounce = ["ounces", "oz"]
-    pound = ["pounds", "lb"]
+    kilo = ["kilograms", "kilogram", "kilos", "kilo", "k"]
+    ounce = ["ounces", "ounce", "oz"]
+    pound = ["pounds", "pound", "lb"]
 
     if unit1 in kilo and unit2 in ounce:
         return str(round(weight * 35.274)) + " " + unit2
@@ -130,7 +131,7 @@ def weight_converter(weight, unit1, unit2):
 
 def celsius_convert(degrees, unit):
 
-    fahr = ["F", "f", "fahr", "fahrenheit"]
+    fahr = ["F", "f", "fahr", "fahrenheit", "Fahrenheit"]
     if unit in fahr:
         return str(round((degrees * 1.8) + 32)) + " " + unit
 
@@ -140,7 +141,7 @@ def celsius_convert(degrees, unit):
 
 def fahrenheit_convert(degrees, unit):
 
-    cels = ["C", "c", "cels", "celsius"]
+    cels = ["C", "c", "cels", "celsius", "Celsius"]
     if unit in cels:
         return str(round((degrees - 32) / 1.8)) + " " + unit
 
@@ -150,8 +151,9 @@ def fahrenheit_convert(degrees, unit):
 
 def temp_converter(temp, unit1, unit2):
 
-    fahr = ["F", "f", "fahr", "fahrenheit"]
-    cels = ["C", "c", "cels", "celsius"]
+    fahr = ["F", "f", "fahr", "fahrenheit", "Fahrenheit"]
+    cels = ["C", "c", "cels", "celsius", "Celsius"]
+    
     if unit1 in cels:
         return celsius_convert(temp, unit2)
 
