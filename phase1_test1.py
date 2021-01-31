@@ -16,9 +16,9 @@ def test_distance():
     assert distance_convert(72, "inches", "feet") == '6 feet'      
     assert inches_converter(24, "ft") == '2 ft'
     assert meters_converter(1, "in") == '39 in'
-    assert miles_converter(2, "m") == "3221 m"
+    assert miles_converter(2, "m") == '3221 m'
     assert distance_convert(72, "in", "ft") == '6 ft'    
-    assert distance_convert(72, "ies", "et") == 'invalid unit
+    assert distance_convert(72, "ies", "et") == 'invalid unit'
     
     
 def test_weight():
