@@ -10,16 +10,20 @@ def test_distance():
 
     
     assert inches_converter(24, "feet") == '2 feet'
+    assert inches_converter(126984, "miles") == '2 miles'
+    assert inches_converter(4800, "meters") == '122 meters'    
     assert meters_converter(1, "inches") == '39 inches'
     assert feet_converter(3, "inches") == '36 inches'
     assert distance_convert(1609.34, "meters", "miles") == '1 miles'
     assert distance_convert(72, "inches", "feet") == '6 feet'      
     assert inches_converter(24, "ft") == '2 ft'
-    assert meters_converter(1, "in") == '39 in'
+    assert meters_converter(1, "ft") == '3 ft'
     assert miles_converter(2, "m") == '3221 m'
     assert distance_convert(72, "in", "ft") == '6 ft'    
     assert distance_convert(72, "ies", "et") == 'invalid unit/number'
     assert distance_convert("asdf", "in", "ft") == 'invalid unit/number'
+    assert distance_convert(2, "miles", "inches") == '126984 inches'
+    assert distance_convert(400, "feet", "meters") == '122 meters' 
     
 def test_weight():
     
