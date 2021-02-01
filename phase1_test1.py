@@ -24,6 +24,9 @@ def test_distance():
     assert distance_convert("asdf", "in", "ft") == 'invalid unit/number'
     assert distance_convert(2, "miles", "inches") == '126984 inches'
     assert distance_convert(400, "feet", "meters") == '122 meters' 
+    assert distance_convert(122, "meters", "inches") == '4803 inches'
+    assert distance_convert(1000000, "inches", "miles") == '16 miles'
+    assert distance_convert(12, "feet", "inches") == '144 inches'
     
 def test_weight():
     
@@ -39,7 +42,10 @@ def test_weight():
     assert weight_converter(5, "lb", "oz") == '80 oz'
     assert weight_converter(10, "k", "lb") == '22 lb'
     assert weight_converter(22, "pounds", "kilos") == '10 kilos'
-    assert weight_converter(10, "rr", "ki") == 'invalid unit/number'    
+    assert weight_converter(10, "r", "ki") == 'invalid unit/number'    
+    assert weight_converter(10, "k", "lb") == '22 lb'
+    assert weight_converter("9", "pounds", "kilos") == 'invalid unit/number'
+    assert weight_converter("tr", "pounds", "kilo") == 'invalid unit/number'  
     
 def test_temperature():
     
