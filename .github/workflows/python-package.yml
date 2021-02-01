@@ -36,9 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest phase1.py
-    - name: Test Coverage
-      run: |
         coverage run -m pytest
-    - name: Show Coverage report
+    - name: Show coverage report
+      run: |
         coverage report -m
+    
