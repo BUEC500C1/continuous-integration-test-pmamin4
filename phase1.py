@@ -4,6 +4,16 @@
 
 #===================
 
+''' Each function takes one input as float or int
+    which is the amounts of units and the "unit"
+    inputs would be strings.
+'''
+
+'''The first four functions individually convert
+   "inches, "meters", "feet", and "miles" as floats/ints
+   to a different "unit" taken as string inputs. The kilo, ounce,
+   pound, celsius, and fahrenheit convert functions work the same.
+'''
 
 def meters_converter(meters, unit):
 
@@ -78,6 +88,11 @@ def miles_converter(miles, unit):
     else:
         return "invalid unit/number"
 
+
+''' distance_convert takes distance as a float/int and  
+    converts from one unit "unit1" to a different unit "unit2".
+    Weight_converter and temp_converter work the same way.
+'''
 
 def distance_convert(distance, unit1, unit2):
     
