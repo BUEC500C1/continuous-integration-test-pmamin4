@@ -12,3 +12,4 @@ For converting weight, there three functions converting weight in one indiviual 
 
 Converting between degrees Celsius and degrees Fahrenheit will work similar to the distance and weight conversion functions. There are two functions for individually converting degrees Celsius to degrees Fahrenheit and degrees Fahrenheit to degrees Celsius. The third main function will call one of these two based on the input for quantity (temperature) and first and second units.
 
+There will also tests for all of these functions as well and they will all be tested in continuous build processes. The purpose is to find as many errors as possible and improve the functions as much as possible.
